@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Logistics</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="carousel.js" defer></script>
+    <script src="stats.js" defer></script>
+    <script src="navbar.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo1.png" alt="Enterprise Logistics Logo" height="40" />
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#shop">Boutique</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <div class="blur-overlay hide" id="blurOverlay"></div>
+    <header class="hero">
+        <div class="hero-image-container carousel">
+            <img src="img/header-bg.jpg" alt="Logistics background 1" class="carousel-image active" />
+            <img src="img/header-bg2.png" alt="Logistics background 2" class="carousel-image" />
+            <img src="img/header-bg3.jpg" alt="Logistics background 3" class="carousel-image" />
+            <div class="carousel-indicators">
+                <span class="carousel-dot active"></span>
+                <span class="carousel-dot"></span>
+                <span class="carousel-dot"></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-rect">
+                <h1>TRANSPORT POUR TOUS</h1>
+                <p>Your trusted partner in global supply chain solutions</p>
+                <a href="#contact" class="cta-btn">Get in Touch</a>
+            </div>
+        </div>
+    </header>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="sect-about about-us">
+                <h2>Qui sommes nous ?</h2>
+                <p>Chez TPM, nous sommes bien plus qu'une entreprise de logistique ; nous sommes votre partenaire de confiance pour tous vos besoins en transport, en approvisionnement et en formation. Depuis notre base à Brazzaville, nous nous engageons à offrir des solutions fiables, efficaces et innovantes, adaptées aux exigences de nos clients, qu'ils soient professionnels ou particuliers.</p>
+            </div>
+            <div class="sect-about mission">
+                <h2>Notre Mission</h2>
+                <p>Notre mission est de simplifier la chaîne logistique et de garantir la fluidité de vos opérations. Grâce à notre expertise et à un parc de véhicules diversifié, nous couvrons une large gamme de services essentiels.</p>
+            </div>
+        </div>
+    </section>
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-number" data-target="1200">0</div>
+                    <div class="stat-label">Clients satisfaits</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" data-target="350">0</div>
+                    <div class="stat-label">Projets livrés</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" data-target="25">0</div>
+                    <div class="stat-label">Véhicules</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">Années d'expérience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-list">
+                <div class="service">
+                    <h3>Freight Forwarding</h3>
+                    <p>Comprehensive air, sea, and land freight solutions tailored to your needs.</p>
+                </div>
+                <div class="service">
+                    <h3>Warehousing</h3>
+                    <p>Secure and scalable storage options for all types of goods.</p>
+                </div>
+                <div class="service">
+                    <h3>Supply Chain Management</h3>
+                    <p>End-to-end supply chain visibility and optimization for your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Enterprise Logistics. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
