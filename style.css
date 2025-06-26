@@ -657,6 +657,8 @@ h2 {
         width: 98%;
     }
 
+
+
     .services h2{
         width: 90%;
         margin: 25px auto 35px;
@@ -678,6 +680,7 @@ h2 {
         flex-direction: row;
         align-items: center;
         gap: 0.5em;
+        width: 90%;
     }
     .logo {
         margin-right: 0;
@@ -854,6 +857,61 @@ body.menu-open {
     opacity: 0;
     pointer-events: none;
 }
+
+
+/* === PARTENAIRES (section isolée) === */
+.partners-section {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    margin: 40px 0;
+    padding: 40px 0 30px 0;
+}
+.partners-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 2em;
+    text-align: center;
+}
+.partners-section .partners-slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: 100px;
+    margin: 0 auto;
+}
+.partners-section .partners-track {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    width: max-content;
+    animation: partners-scroll 18s linear infinite;
+}
+.partners-section .partner-logo {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(0.2) brightness(0.95);
+    transition: filter 0.2s;
+}
+.partners-section .partner-logo:hover {
+    filter: grayscale(0) brightness(1.1);
+}
+@keyframes partners-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+@media (max-width: 700px) {
+    .partners-section {
+        padding: 30px 0 20px 0;
+    }
+    .partners-section .partners-slider {
+        height: 70px;
+    }
+    .partners-section .partner-logo {
+        height: 40px;
+    }
+}
+/* === FIN PARTENAIRES === */
 
 /* Corrections et améliorations :
 - Correction de text-wrap -> overflow-wrap
