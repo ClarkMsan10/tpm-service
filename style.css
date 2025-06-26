@@ -712,8 +712,16 @@ h2 {
         padding: 1.5em;
         z-index: 10;
         background-color: rgba(0, 0, 0, 0.701);
-        text-align: center;
         
+    }
+
+    .service-card-left h3 {
+        text-align: center;
+    }
+
+    .service-card-left p {
+        text-align: justify;
+        margin-bottom: 1.5em;
     }
 
     .service-card-right{
@@ -880,11 +888,10 @@ body.menu-open {
     margin: 0 auto;
 }
 .partners-section .partners-track {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    width: max-content;
+    display: inline-block;
+    white-space: nowrap;
     animation: partners-scroll 18s linear infinite;
+    will-change: transform;
 }
 .partners-section .partner-logo {
     height: 70px;
@@ -892,6 +899,12 @@ body.menu-open {
     object-fit: contain;
     filter: grayscale(0.2) brightness(0.95);
     transition: filter 0.2s;
+    display: inline-block;
+    margin-right: 40px;
+    vertical-align: middle;
+}
+.partners-section .partner-logo:last-child {
+    margin-right: 0;
 }
 .partners-section .partner-logo:hover {
     filter: grayscale(0) brightness(1.1);
@@ -909,6 +922,7 @@ body.menu-open {
     }
     .partners-section .partner-logo {
         height: 40px;
+        margin-right: 20px;
     }
 }
 /* === FIN PARTENAIRES === */
