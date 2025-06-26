@@ -1,4 +1,11 @@
 /* style.css - Responsive one-page design for Enterprise Logistics */
+*
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 :root {
     --primary-color: #010101;
@@ -157,22 +164,135 @@ h2 {
 
 .service-list {
     display: flex;
-    gap: 2em;
     flex-wrap: wrap;
+    gap: 2em;
     justify-content: space-between;
 }
-.service {
-    flex: 1 1 250px;
-    background: #f7f7f7;
-    border-left: 6px solid var(--secondary-color);
-    border-radius: 8px;
-    padding: 1.5em;
-    margin-bottom: 1em;
-    min-width: 220px;
+
+.service-card-left {
+    background: var(--primary-color);
+    color: #fff;
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em;
+    position: relative;
+    width: 300px;
+    height: 100%;
+    background: var(--primary-color);
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
 }
-.service h3 {
-    margin-top: 0;
+
+.container-service {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: space-between;
+    width: 100%;
+}
+.service-card-primary {
+    color: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    margin-bottom: 1.5em;
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-start; */
+    flex: 1 1 300px;
+    position: relative;
+    width: 800px;
+    height: 370px;
+}
+
+
+.service-card-right {
+    /* margin-right: 1.5em; */
+    flex: 1 1 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f7f7;
+    width: 200px;
+    height: 100%;
+    padding: 0;
+}
+
+
+.service-card-right img {
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+.service-card-primary h3 {
+    color: #fff;
+    margin-bottom: 1em;
+}
+.service-card-primary p {
+    color: #fff;
+    margin-bottom: 1.5em;
+}
+.service-btn-secondary {
+    background: var(--secondary-color);
     color: var(--primary-color);
+    border: none;
+    border-radius: 20px;
+    padding: 0.7em 1.5em;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    align-self: flex-start;
+}
+.service-btn-secondary:hover {
+    background: #fff;
+    color: var(--secondary-color);
+}
+
+.service-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+.service-card-desc {
+    margin-bottom: 1em;
+    font-size: 1.05rem;
+    color: #fff;
+}
+.service-card-btn {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 20px;
+    padding: 0.7em 1.5em;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-top: auto;
+    transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+}
+.service-card-btn:hover {
+    background: #fff;
+    color: var(--secondary-color);
+}
+
+
+
+
+
+.service-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 220px;
+    max-height: 180px;
+    border-radius: 0 0 0 0;
 }
 
 .contact form {
@@ -245,12 +365,12 @@ h2 {
     z-index: 10;
 }
 
-.sect-about h2 {
+.sect-about h2, .services h2 {
     text-transform: uppercase;
     position: relative;
 }
 
-.sect-about h2::after {
+.sect-about h2::after, .services h2::after {
     content: '';
     position: absolute;
     width: 70px;
@@ -431,7 +551,11 @@ h2 {
     }
     .service-list {
         flex-direction: column;
-        gap: 1em;
+        align-items: center;
+        gap: 1.5em;
+    }
+    .service-card {
+        max-width: 98vw;
     }
     .hero-image-container{
         height: 20vh;
@@ -449,7 +573,7 @@ h2 {
         max-width: 100%;
         width: 100%;
         clip-path: none;
-        border-radius: 18px;
+        /* border-radius: 18px; */
         border-right: 0;
         margin: auto 0;
         padding: 2em;
@@ -527,11 +651,26 @@ h2 {
         font-size: 2rem;
     }
     h2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     .container {
         width: 98%;
     }
+
+    .services h2{
+        width: 90%;
+        margin: 25px auto 35px;
+    }
+
+    .services h3{
+        text-transform: uppercase;
+    }
+
+    .container-service {
+        width: 90%;
+        margin: 0 auto;
+    }
+
     section {
         padding: 30px 0 20px 0;
     }
@@ -552,6 +691,144 @@ h2 {
     }
     .hero-image-container {
         height: 200px;
+    }
+
+    .service-card-primary{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 500px;
+        position: relative;
+        border-radius: 0;
+    }
+
+    .service-card-left {
+        width: 100%;
+        height: 100%;
+        border-radius: 14px;
+        padding: 1.5em;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.701);
+        text-align: center;
+        
+    }
+
+    .service-card-right{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+    .service-card-right img {
+        width: 100%;
+        height: 100%;
+        border-radius: 14px;
+    }
+
+    .service-btn-secondary{
+        align-self: center;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+    .container-service {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+    }
+    .service-card-primary {
+        max-width: 90vw;
+    }
+}
+
+.testimonials-section {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    margin: 40px 0;
+    padding: 60px 0 40px 0;
+}
+.testimonials-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 2em;
+    text-align: center;
+}
+.testimonials-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+.testimonial-card {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    background: var(--background-light);
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    padding: 2em 1.5em;
+    max-width: 350px;
+    min-width: 220px;
+    flex: 1 1 280px;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: opacity 0.4s, transform 0.4s, visibility 0s 0.5s;
+    position: absolute;
+    left: 0; right: 0; margin: auto;
+    z-index: 1;
+    height: auto;
+}
+.testimonial-card.active,
+.testimonial-card.slide-in-left,
+.testimonial-card.slide-in-right {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.4s, transform 0.4s, visibility 0s;
+    position: relative;
+    z-index: 2;
+}
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-60px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(60px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+.testimonial-controls {
+    display: flex;
+    gap: 1.5em;
+    margin-top: 2em;
+    justify-content: center;
+}
+.testimonial-prev, .testimonial-next {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.testimonial-prev:hover, .testimonial-next:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .testimonial-card {
+        max-width: 98vw;
     }
 }
 
